@@ -2447,7 +2447,7 @@ min(input: Types.Table, handler: MinHandler?, comparator: MinComparator): any
 </code></pre>
 <p>Returns the minimum value in the <em>input</em> <a href="#table">Table</a>. By default, this returns the least value in the table as defined by the <code>&lt;</code> operator.</p>
 <p>If a <em>handler</em> is provided, elements will first be transformed by <code>handler(value, key)</code> before being used for comparison.</p>
-<p>Elements will be compared using the <em>comparator</em> if it is provided. The comparator should take two elements and return <code>true</code> if the first one is greater than the second one, and <code>false</code> otherwise.</p>
+<p>Elements will be compared using the <em>comparator</em> if it is provided. The comparator should take two elements and return <code>true</code> if the first one is less than the second one, and <code>false</code> otherwise.</p>
 <p>If the provided <em>input</em> has no elements, return <code>nil</code>.</p>
 <p><strong>Examples</strong></p>
 <pre><code class="language-lua">Dash.min({1, 2, 3}) --&gt; 1

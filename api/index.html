@@ -2078,7 +2078,7 @@ Output: 2
 filter(input: Types.Table, handler: FilterHandler): Types.Array&lt;any&gt;
 </code></pre>
 <p>Filter the <em>input</em> <a href="#table">Table</a> by calling the handler on each <code>(value, key)</code> tuple.</p>
-<p>For an <a href="#array">Array</a> input, the order of elements is prevered in the output.</p>
+<p>For an <a href="#array">Array</a> input, the order of elements is preserved in the output.</p>
 <p>The handler should return truthy to preserve the value in the resulting Table.</p>
 <p><strong>Example</strong></p>
 <pre><code class="language-lua">-- Take only the elements whose values begin with &quot;r&quot;

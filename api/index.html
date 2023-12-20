@@ -1,0 +1,3884 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+
+  <link rel="prev" href="..">
+
+
+
+  <link rel="icon" href="../assets/images/favicon.png">
+  <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+
+
+
+  <title>API Reference - Dash</title>
+
+
+
+  <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+
+
+  <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <style>
+    :root {
+      --md-text-font: "Roboto";
+      --md-code-font: "Roboto Mono"
+    }
+  </style>
+
+
+
+  <link rel="stylesheet" href="../extra.css">
+
+  <script>__md_scope = new URL("..", location), __md_hash = e => [...e].reduce((e, _) => (e << 5) - e + _.charCodeAt(0), 0), __md_get = (e, _ = localStorage, t = __md_scope) => JSON.parse(_.getItem(t.pathname + "." + e)), __md_set = (e, _, t = localStorage, a = __md_scope) => { try { t.setItem(a.pathname + "." + e, JSON.stringify(_)) } catch (e) { } }</script>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+
+
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+  <label class="md-overlay" for="__drawer"></label>
+  <div data-md-component="skip">
+
+
+    <a href="#api-reference" class="md-skip">
+      Skip to content
+    </a>
+
+  </div>
+  <div data-md-component="announce">
+
+  </div>
+
+
+
+
+
+
+  <header class="md-header md-header--shadow" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href=".." title="Dash" class="md-header__button md-logo" aria-label="Dash" data-md-component="logo">
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z" />
+        </svg>
+
+      </a>
+      <label class="md-header__button md-icon" for="__drawer">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z" />
+        </svg>
+      </label>
+      <div class="md-header__title" data-md-component="header-title">
+        <div class="md-header__ellipsis">
+          <div class="md-header__topic">
+            <span class="md-ellipsis">
+              Dash
+            </span>
+          </div>
+          <div class="md-header__topic" data-md-component="header-topic">
+            <span class="md-ellipsis">
+
+              API Reference
+
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <label class="md-header__button md-icon" for="__search">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z" />
+        </svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+        <label class="md-search__overlay" for="__search"></label>
+        <div class="md-search__inner" role="search">
+          <form class="md-search__form" name="search">
+            <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search"
+              autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false"
+              data-md-component="search-query" required>
+            <label class="md-search__icon md-icon" for="__search">
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z" />
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z" />
+              </svg>
+            </label>
+            <nav class="md-search__options" aria-label="Search">
+
+              <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z" />
+                </svg>
+              </button>
+            </nav>
+
+          </form>
+          <div class="md-search__output">
+            <div class="md-search__scrollwrap" data-md-scrollfix>
+              <div class="md-search-result" data-md-component="search-result">
+                <div class="md-search-result__meta">
+                  Initializing search
+                </div>
+                <ol class="md-search-result__list" role="presentation"></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="md-header__source">
+        <a href="https://github.com/Roblox/Dash" title="Go to repository" class="md-source" data-md-component="source">
+          <div class="md-source__icon md-icon">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.-->
+              <path
+                d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z" />
+            </svg>
+          </div>
+          <div class="md-source__repository">
+            GitHub
+          </div>
+        </a>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <div class="md-container" data-md-component="container">
+
+
+
+
+
+
+    <main class="md-main" data-md-component="main">
+      <div class="md-main__inner md-grid">
+
+
+
+        <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+          <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+
+
+
+
+              <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                <label class="md-nav__title" for="__drawer">
+                  <a href=".." title="Dash" class="md-nav__button md-logo" aria-label="Dash" data-md-component="logo">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z" />
+                    </svg>
+
+                  </a>
+                  Dash
+                </label>
+
+                <div class="md-nav__source">
+                  <a href="https://github.com/Roblox/Dash" title="Go to repository" class="md-source"
+                    data-md-component="source">
+                    <div class="md-source__icon md-icon">
+
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.-->
+                        <path
+                          d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z" />
+                      </svg>
+                    </div>
+                    <div class="md-source__repository">
+                      GitHub
+                    </div>
+                  </a>
+                </div>
+
+                <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+                  <li class="md-nav__item">
+                    <a href=".." class="md-nav__link">
+
+
+                      <span class="md-ellipsis">
+                        Home
+                      </span>
+
+
+                    </a>
+                  </li>
+
+
+
+
+
+
+
+
+
+
+
+                  <li class="md-nav__item md-nav__item--active">
+
+                    <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+                    <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+                      <span class="md-ellipsis">
+                        API Reference
+                      </span>
+
+
+                      <span class="md-nav__icon md-icon"></span>
+                    </label>
+
+                    <a href="./" class="md-nav__link md-nav__link--active">
+
+
+                      <span class="md-ellipsis">
+                        API Reference
+                      </span>
+
+
+                    </a>
+
+
+
+                    <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+                      <label class="md-nav__title" for="__toc">
+                        <span class="md-nav__icon md-icon"></span>
+                        Table of contents
+                      </label>
+                      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+                        <li class="md-nav__item">
+                          <a href="#types" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Types
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Types">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#array" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Array
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#args" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Args
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#map" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Map
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#set" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Set
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#table" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Table
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#class" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Class
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#handlers" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Handlers
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#anyfunction" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    AnyFunction
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#tables" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Tables
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Tables">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#all-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    all (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#collect" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    collect
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#collectarray" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    collectArray
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#collectset" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    collectSet
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#copy" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    copy
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#count-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    count (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#filter" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    filter
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#find" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    find
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#foreach" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    forEach
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#frequencies-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    frequencies (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#groupby" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    groupBy
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#includes" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    includes
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#keyby" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    keyBy
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#keys" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    keys
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#map_1" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    map
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#mapone" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    mapOne
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#max-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    max (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#min-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    min (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#omit" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    omit
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#reduce" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    reduce
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#shallowequal" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    shallowEqual
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#some" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    some
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#values" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    values
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#arrays" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Arrays
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Arrays">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#append" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    append
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#findindex" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    findIndex
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#flat" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    flat
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#last" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    last
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#mapfirst" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    mapFirst
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#maplast" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    mapLast
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#product-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    product (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#reverse" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    reverse
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#slice" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    slice
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#sum-new" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    sum (new!)
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#maps" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Maps
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Maps">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#assign" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    assign
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#freeze" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    freeze
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#getorset" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    getOrSet
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#join" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    join
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#joindeep" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    joinDeep
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#strings" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Strings
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Strings">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#endswith" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    endsWith
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#islowercase" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    isLowercase
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#isuppercase" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    isUppercase
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#leftpad" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    leftPad
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#rightpad" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    rightPad
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#spliton" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    splitOn
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#startswith" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    startsWith
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#trim" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    trim
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#functions" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Functions
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Functions">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#compose" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    compose
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#foreachargs" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    forEachArgs
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#identity" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    identity
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#iscallable" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    isCallable
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#noop" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    noop
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#classes" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Classes
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Classes">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#error" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Error
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#symbol" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    Symbol
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#class_1" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    class
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#symbols" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Symbols
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Symbols">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#none" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    None
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#debugging" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Debugging
+                            </span>
+                          </a>
+
+                          <nav class="md-nav" aria-label="Debugging">
+                            <ul class="md-nav__list">
+
+                              <li class="md-nav__item">
+                                <a href="#assertequal" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    assertEqual
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#cycles" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    cycles
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#format" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    format
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#formatvalue" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    formatValue
+                                  </span>
+                                </a>
+
+                              </li>
+
+                              <li class="md-nav__item">
+                                <a href="#pretty" class="md-nav__link">
+                                  <span class="md-ellipsis">
+                                    pretty
+                                  </span>
+                                </a>
+
+                              </li>
+
+                            </ul>
+                          </nav>
+
+                        </li>
+
+                      </ul>
+
+                    </nav>
+
+                  </li>
+
+
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+          <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner">
+
+
+              <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+                <label class="md-nav__title" for="__toc">
+                  <span class="md-nav__icon md-icon"></span>
+                  Table of contents
+                </label>
+                <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+                  <li class="md-nav__item">
+                    <a href="#types" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Types
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Types">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#array" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Array
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#args" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Args
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#map" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Map
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#set" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Set
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#table" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Table
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#class" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Class
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#handlers" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Handlers
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#anyfunction" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              AnyFunction
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#tables" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Tables
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Tables">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#all-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              all (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#collect" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              collect
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#collectarray" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              collectArray
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#collectset" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              collectSet
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#copy" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              copy
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#count-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              count (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#filter" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              filter
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#find" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              find
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#foreach" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              forEach
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#frequencies-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              frequencies (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#groupby" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              groupBy
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#includes" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              includes
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#keyby" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              keyBy
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#keys" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              keys
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#map_1" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              map
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#mapone" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              mapOne
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#max-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              max (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#min-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              min (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#omit" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              omit
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#reduce" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              reduce
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#shallowequal" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              shallowEqual
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#some" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              some
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#values" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              values
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#arrays" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Arrays
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Arrays">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#append" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              append
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#findindex" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              findIndex
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#flat" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              flat
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#last" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              last
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#mapfirst" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              mapFirst
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#maplast" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              mapLast
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#product-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              product (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#reverse" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              reverse
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#slice" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              slice
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#sum-new" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              sum (new!)
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#maps" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Maps
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Maps">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#assign" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              assign
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#freeze" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              freeze
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#getorset" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              getOrSet
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#join" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              join
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#joindeep" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              joinDeep
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#strings" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Strings
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Strings">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#endswith" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              endsWith
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#islowercase" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              isLowercase
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#isuppercase" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              isUppercase
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#leftpad" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              leftPad
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#rightpad" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              rightPad
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#spliton" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              splitOn
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#startswith" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              startsWith
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#trim" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              trim
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#functions" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Functions
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Functions">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#compose" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              compose
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#foreachargs" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              forEachArgs
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#identity" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              identity
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#iscallable" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              isCallable
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#noop" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              noop
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#classes" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Classes
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Classes">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#error" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Error
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#symbol" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              Symbol
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#class_1" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              class
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#symbols" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Symbols
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Symbols">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#none" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              None
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a href="#debugging" class="md-nav__link">
+                      <span class="md-ellipsis">
+                        Debugging
+                      </span>
+                    </a>
+
+                    <nav class="md-nav" aria-label="Debugging">
+                      <ul class="md-nav__list">
+
+                        <li class="md-nav__item">
+                          <a href="#assertequal" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              assertEqual
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#cycles" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              cycles
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#format" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              format
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#formatvalue" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              formatValue
+                            </span>
+                          </a>
+
+                        </li>
+
+                        <li class="md-nav__item">
+                          <a href="#pretty" class="md-nav__link">
+                            <span class="md-ellipsis">
+                              pretty
+                            </span>
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+
+                  </li>
+
+                </ul>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="md-content" data-md-component="content">
+          <article class="md-content__inner md-typeset">
+
+
+
+
+
+
+
+            <h1 id="api-reference">API Reference</h1>
+            <p><strong>Disclaimer</strong>: These are not the official docs and the new functions are not available for
+              use. It would be nice if someone helped me add them though.</p>
+            <h2 id="types">Types</h2>
+            <h3 id="array">Array</h3>
+            <pre><code class="language-lua">type Array&lt;Value&gt; = {[number]: Value}
+</code></pre>
+            <p>A table with values of type <em>Value</em> and numeric keys 1..n with no gaps</p>
+            <hr>
+
+            <h3 id="args">Args</h3>
+            <pre><code class="language-lua">type Args&lt;Value&gt; = {[number]: Value}
+</code></pre>
+            <p>A table with values of type <em>Value</em> and numeric keys, possibly with gaps.</p>
+            <hr>
+
+            <h3 id="map">Map</h3>
+            <pre><code class="language-lua">Map&lt;Key, Value&gt; = {[Key]: Value}
+</code></pre>
+            <p>A table with keys of type <em>Key</em> and values of type <em>Value</em></p>
+            <hr>
+
+            <h3 id="set">Set</h3>
+            <pre><code class="language-lua">type Set&lt;Key&gt; = {[Key]: boolean}
+</code></pre>
+            <p>A table with keys of a fixed type <em>Key</em> and a boolean value representing membership of the set
+              (default is false)</p>
+            <hr>
+
+            <h3 id="table">Table</h3>
+            <pre><code class="language-lua">type Table = {[any]: any}
+</code></pre>
+            <p>A table of any type</p>
+            <hr>
+
+            <h3 id="class">Class</h3>
+            <pre><code class="language-lua">type Class&lt;Object&gt; = {
+
+new: () -&gt; Object
+}
+</code></pre>
+            <p>A class has a constructor returning an instance of <em>Object</em> type</p>
+            <hr>
+
+            <h3 id="handlers">Handlers</h3>
+            <p>Some functions such as <a href="#filter">filter</a> will require handlers. There will be a
+              <code>Key</code> and <code>Value</code> type to denote whether the key or value argument is passed first,
+              but they are both <code>any</code> type unless otherwise specified.</p>
+            <hr>
+
+            <h3 id="anyfunction">AnyFunction</h3>
+            <pre><code class="language-lua">type AnyFunction = () -&gt; any
+</code></pre>
+            <p>Represents a function which takes any arguments and returns any value</p>
+            <hr>
+
+            <h2 id="tables">Tables</h2>
+            <p>These utilities operate on <a href="#table">Tables</a> of any kind.</p>
+            <hr>
+
+            <h3 id="all-new">all (new!)</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type AllHandler = (Value, Key) -&gt; boolean
+
+all(input: types.Table, handler: AllHandler?): boolean
+</code></pre>
+            <p>Iterates through all elements of the <em>input</em> <a href="#table">Table</a>.</p>
+            <p>Calls the <em>handler</em> for each entry and returns <code>false</code> if the handler returns falsy for
+              any element which it is called with. Otherwise, all elements were truthy so return <code>true</code>.</p>
+            <p>If the handler is not provided, use the truthiness of the values in the table.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- These are the only falsy values in Lua
+Dash.all({nil, false}) --&gt; false
+</code></pre>
+            <pre><code class="language-lua">Dash.all({true, 0, &quot;0&quot;}) --&gt; true
+</code></pre>
+            <pre><code class="language-lua">-- Do all words start with 'ro'?
+Dash.all(
+    {&quot;roblox&quot;, &quot;roact&quot;, &quot;rodux&quot;}, 
+    function(word) return Dash.startsWith(word, &quot;ro&quot;) 
+end)
+--[[
+Output: true
+]]
+
+</code></pre>
+            <h3 id="collect">collect</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type CollectHandler = (Key, Value) -&gt; (any, any)?
+
+collect(input: Types.Table, handler: CollectHandler): Types.Map&lt;any, any&gt;
+</code></pre>
+            <p>Collect returns a new <a href="#table">Table</a> derived from <em>input</em> by iterating through its
+              pairs and calling
+              the handler on each <code>(key, value)</code> tuple.</p>
+            <p>The handler should return a new <code>(newKey, value)</code> tuple to be inserted into the returned
+              Table,
+              or <code>nil</code> if no value should be added.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Invert keys and values of a table
+Dash.collect({a = &quot;1&quot;, b = &quot;2&quot;, c = 3}, function(key, value) 
+    return value, key 
+end)
+
+--[[
+Output: {
+    [3] = &quot;c&quot;
+    [&quot;1&quot;] = &quot;a&quot;, 
+    [&quot;2&quot;] = &quot;b&quot;, 
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="collectarray">collectArray</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type CollectHandler = (Key, Value) -&gt; any?
+
+collectArray(input: Types.Table, handler: Types.AnyFunction): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Collect returns a new <a href="#array">Array</a> derived from <em>input</em> by iterating through its
+              pairs and calling
+              the handler on each <code>(key, value)</code> tuple.</p>
+            <p>The handler should return a new value to be pushed onto the end of the result array, or <code>nil</code>
+              if no value should be added.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Double all elements, ignoring results that are multiples of three
+Dash.collectArray({1, 2, 3, 4, 5, 6}, function(key, value)
+    local newValue = value * 2
+    return if newValue % 3 == 0 then nil else newValue
+end)
+
+--[[
+Output: {
+[1] = 2,
+[2] = 4,
+[3] = 8,
+[4] = 10
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="collectset">collectSet</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type CollectHandler = (Key, Value) -&gt; any?
+
+collectSet(input: Types.Table, handler: Types.AnyFunction?): Types.Set&lt;any&gt;
+</code></pre>
+            <p>Build a set from the entries of the <em>input</em> Table, calling <em>handler</em> on each entry and
+              using
+              the returned value as an element to add to the set.</p>
+            <p>If <em>handler</em> is not provided, values of <code>input</code> are used as elements.</p>
+            <hr>
+
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- Convert Array to Set
+Dash.collectSet({&quot;toast&quot;, &quot;bagel&quot;, &quot;donut&quot;})
+
+--[[
+Output: {
+    [&quot;bagel&quot;] = true,
+    [&quot;donut&quot;] = true,
+    [&quot;toast&quot;] = true
+}
+]]
+</code></pre>
+            <pre><code class="language-lua">-- Create set of first letters of each word
+Dash.collectSet({&quot;toast&quot;, &quot;bagel&quot;, &quot;donut&quot;, &quot;bread&quot;}, function(key, value)
+    return value:sub(1, 1)
+end)
+
+--[[
+Output: {
+    [&quot;b&quot;] = true,
+    [&quot;d&quot;] = true,
+    [&quot;t&quot;] = true
+}
+]]
+</code></pre>
+            <h3 id="copy">copy</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">copy(input: Types.Table): Types.Table
+</code></pre>
+            <p>Returns a shallow copy of the <em>input</em> Table.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.copy({a = 1, b = 3})
+
+--[[
+Output: {
+    [&quot;a&quot;] = 1,
+    [&quot;b&quot;] = 3
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="count-new">count (new!)</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type CountHandler = (Value, Key) -&gt; boolean
+
+count(input: types.Table, handler: CountHandler?): number
+</code></pre>
+            <p>If no <em>handler</em> is provided, return the number of elements in the <em>input</em> <a
+                href="#table">Table</a>.</p>
+            <p>If the <em>handler</em> is provided, increase the count for each element for which the handler returns
+              true on the <code>(value, key)</code> pair.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.count({1, 2, 3, 4, 5}) --&gt; 5
+</code></pre>
+            <pre><code class="language-lua">-- Count the number of ids that start with 1
+Dash.count(
+    {[12] = true, [24] = true, [153] = true, [199] = true}, 
+    function(value, id) return tostring(id):sub(1, 1) == &quot;1&quot; 
+end)
+
+--[[
+Output: 3
+]]
+</code></pre>
+            <pre><code class="language-lua">-- Count the number of numbers divisible by 5
+Dash.count(
+    {1, 1, 2, 3, 5, 8, 13, 21, 34, 55}, 
+    function(num) return num % 5 == 0
+end)
+
+--[[
+Output: 2
+]]
+</code></pre>
+            <h3 id="filter">filter</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type FilterHandler = (Value, Key) -&gt; boolean
+
+filter(input: Types.Table, handler: FilterHandler): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Filter the <em>input</em> <a href="#table">Table</a> by calling the handler on each
+              <code>(value, key)</code> tuple.</p>
+            <p>For an <a href="#array">Array</a> input, the order of elements is prevered in the output.</p>
+            <p>The handler should return truthy to preserve the value in the resulting Table.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Take only the elements whose values begin with &quot;r&quot;
+Dash.filter(
+    {place = &quot;roblox&quot;, packages = &quot;rotriever&quot;, ide = &quot;studio&quot;}, 
+    function(word) return Dash.startsWith(word, &quot;r&quot;) 
+end)
+
+--[[
+Output: {
+    [1] = &quot;roblox&quot;,
+    [2] = &quot;rotriever&quot;
+}
+]]
+</code></pre>
+            <p><strong>TODO</strong>: Why does this return an Array? It can be made to return a Table.</p>
+            <hr>
+
+            <h3 id="find">find</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type FindHandler = (Value, Key) -&gt; boolean
+
+find(input: Types.Table, handler: FindHandler) -&gt; value?
+</code></pre>
+            <p>Returns an element in the <em>input</em> <a href="#table">Table</a> that the handler returns
+              <code>true</code> for, when passed the
+              <code>(value, key)</code> entry.
+            </p>
+            <p>Returns nil if no entires satisfy the condition.</p>
+            <p>For an Array, this first matching element is returned.
+              For a Map, an arbitrary matching element is returned if it exists.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- Check if there's the &quot;ExtraSettings&quot; key and get the value of that key if so
+Dash.find(
+    {Id = 145, IsReady = false, ExtraSettings = {AutoReady = true}}, 
+    function(value, key) return key == &quot;ExtraSettings&quot; end
+)
+
+--[[
+Output: {
+    [&quot;AutoReady&quot;] = true
+}
+]]
+
+
+Dash.find({Id = 145, IsReady = false}, 
+    function(value, key) return key == &quot;ExtraSettings&quot; end
+)
+--[[
+Output: nil
+]]
+
+</code></pre>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#first">Dash.first</a> for a function which returns the first element of an <a
+                  href="#array">Array</a> matching a condition.</li>
+            </ul>
+            <hr>
+
+            <h3 id="foreach">forEach</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type ForEachHandler = (Value, Key) -&gt; ()
+
+forEach(input: Types.Table, handler: ForEachHandler): ()
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> Table.</p>
+            <p>If the table is an Array, it iterates in order 1..n.</p>
+            <p>If the table is a Map, the keys are visited in an arbitrary order.</p>
+            <p>Calls the <em>handler</em> for each entry.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Print all values of table
+Dash.forEach({&quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;}, function(value) print(value) end)
+
+--[[
+Output: Item 1
+Item 2
+Item 3  
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="frequencies-new">frequencies (new!)</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type FrequenciesHandler = (Value, Key) -&gt; any
+
+frequencies(input: Types.Table)
+</code></pre>
+            <p>If no handler is provided, returns a <a href="#map">Map</a> with keys as unique values of the
+              <em>input</em> <a href="#table">Table</a> and values as the count of each value.</p>
+            <p>If a handler is provided, returns a <a href="#map">Map</a> with keys as unique elements given by the
+              <em>handler</em> and values as the count of each mapped key.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.frequencies({&quot;Red&quot;, &quot;Black&quot;, &quot;Orange&quot;, &quot;Red&quot;})
+
+--[[
+Output:{
+    [&quot;Black&quot;] = 1,
+    [&quot;Orange&quot;] = 1,
+    [&quot;Red&quot;] = 2
+} 
+]]
+</code></pre>
+            <pre><code class="language-lua">-- Count colors by simple definition of neutral and non-neutral
+function toNeutral(color) 
+    return if Dash.includes({&quot;Black&quot;, &quot;Gray&quot;, &quot;White&quot;}, color) 
+        then &quot;Neutral&quot; 
+        else &quot;Non-neutral&quot;
+end
+Dash.frequencies(
+    {&quot;Black&quot;, &quot;Orange&quot;, &quot;Blue&quot;, &quot;Gray&quot;, &quot;White&quot;}, 
+    function(color) return toNeutral(color) 
+end)
+
+--[[
+Output: {
+    [&quot;Neutral&quot;] = 3,
+    [&quot;Non-neutral&quot;] = 2
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="groupby">groupBy</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">groupBy(input: Types.Table, getKey: any): Types.Table
+</code></pre>
+            <p>Groups values in the <em>input</em> <a href="#table">Table</a> by their <em>getKey</em> value.</p>
+            <p>Each value of the result <a href="#table">Table</a> is an <a href="#array">Array</a> of values from the
+              <em>input</em> <a href="#table">Table</a> which were assigned
+              the corresponding key.</p>
+            <p>If <em>getKey</em> is a function, it is called with each <code>(value, key)</code> entry and uses the
+              return
+              value as the corresponding key to insert at in the result Table. Otherwise, the <em>getKey</em> value
+              is used directly as the key itself.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local output = groupBy({
+    bike = {
+        name = &quot;bike&quot;,
+        color = &quot;blue&quot;
+    },
+    car = {
+        name = &quot;car&quot;,
+        color = &quot;red&quot;
+    },
+    van = {
+        name = &quot;van&quot;,
+        color = &quot;white&quot;
+    },
+    ghost = {
+        name = &quot;ghost&quot;
+    }
+}, &quot;color&quot;)
+--[[
+Output: {
+    blue = {
+        {
+            color = &quot;blue&quot;,
+            name = &quot;bike&quot;
+        }
+    },
+    red = {
+        {
+            color = &quot;red&quot;,
+            name = &quot;car&quot;
+        }
+    },
+    white = {
+        {
+            color = &quot;white&quot;,
+            name = &quot;van&quot;
+        }
+    }
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="includes">includes</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">includes(source: Types.Table, value: any): boolean
+</code></pre>
+            <p>Returns <em>true</em> if the <em>item</em> exists as a value in the <em>source</em> <a
+                href="#table">Table</a>.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Does the table include 100?
+Dash.includes({1, 10, 100, 1000}, 100)
+
+--[[
+Output: true
+]]
+</code></pre>
+            <p><strong>See</strong></p>
+            <p>For a stronger version of <code>Dash.includes</code>, use <a href="#some">Dash.some</a>.</p>
+            <hr>
+
+            <h3 id="keyby">keyBy</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">keyBy(input: Types.Table, getKey: any): Types.Table
+</code></pre>
+            <p>Assigns values in the <em>input</em> <a href="#table">Table</a> by their <em>getKey</em> value.</p>
+            <p>If <em>getKey</em> is a function, it is called with each <code>(value, key)</code> entry and uses the
+              return
+              value as the corresponding key to assign to in the result Table. Otherwise, the <em>getKey</em> value
+              is used directly as the key itself.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local output = keyBy({
+    bike = {
+        name = &quot;bike&quot;,
+        color = &quot;blue&quot;
+    },
+    car = {
+        name = &quot;car&quot;,
+        color = &quot;red&quot;
+    },
+    van = {
+        name = &quot;van&quot;,
+        color = &quot;white&quot;
+    },
+    ghost = {
+        name = &quot;ghost&quot;
+    }
+}, &quot;color&quot;)
+[[
+Output: {
+    blue = {
+        color = &quot;blue&quot;,
+        name = &quot;bike&quot;
+    },
+    red = {
+        color = &quot;red&quot;,
+        name = &quot;car&quot;
+    },
+    white = {
+        color = &quot;white&quot;,
+        name = &quot;van&quot;
+    }
+}]]
+</code></pre>
+            <hr>
+
+            <h3 id="keys">keys</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">keys(input: Types.Table): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Returns an <a href="#array">Array</a> of the keys in the <em>input</em> Table.</p>
+            <p>If the input is an Array, ordering is preserved.</p>
+            <p>If the input is a Map, elements are keys in an arbitrary order.</p>
+            <p><strong>Example</strong>:</p>
+            <pre><code class="language-lua">Dash.keys({
+    Color = &quot;Purple&quot;,
+    Type = &quot;Fruit&quot;,
+    Shape = &quot;Round&quot;
+})
+
+--[[
+Output: {
+    [1] = &quot;Color&quot;,
+    [2] = &quot;Type&quot;,
+    [3] = &quot;Shape&quot;
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="map_1">map</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type MapHandler = (Value, Key) -&gt; any
+
+map(input: Types.Table, handler: MapHandler): Types.Table
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> Table.</p>
+            <p>For an <a href="#array">Array</a> input, the elements are visted in order 1..n.</p>
+            <p>For a <a href="#map">Map</a> input, the elements are visited in an arbitrary order.</p>
+            <p>Calls the <em>handler</em> for each entry and constructs a new <a href="#table">Table</a> using the same
+              keys but replacing
+              the values with new ones returned from the handler.</p>
+            <p>Values returned by <em>handler</em> must be defined.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Map characters to their ASCII
+Dash.map({&quot;a&quot;, &quot;b&quot;, &quot;c&quot;}, function(char) return string.byte(char) end)
+
+--[[
+Output: {
+    [1] = 97,
+    [2] = 98,
+    [3] = 99
+}
+]]
+</code></pre>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#collectArray">Dash.collectArray</a> if you want to return nil values.</li>
+            </ul>
+            <hr>
+
+            <h3 id="mapone">mapOne</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">type MapHandler = (Value, Key) -&gt; any?
+
+mapOne(input: Types.Table, handler: MapHandler?)
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> <a href="#table">Table</a> in no particular order.
+            </p>
+            <p>Calls the <em>handler</em> for each entry and returns the first non-nil value returned by the handler.
+            </p>
+            <p>If <em>handler</em> is <code>nil</code>, the first value visited is returned.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Get any message that's not hidden and return its id.
+Dash.mapOne({
+    {Id = 1, IsHidden = true},
+    {Id = 3, IsHidden = false},
+    {Id = 2, IsHidden = false},
+}, function(message) 
+    return if message.IsHidden then nil else message.Id 
+end)
+
+--[[
+Output: 3
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="max-new">max (new!)</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type MaxComparator = (any, any) -&gt; boolean
+type MaxHandler = (Value, Key) -&gt; any
+
+max(input: Types.Table, handler: MaxHandler?, comparator: MaxComparator): any
+</code></pre>
+            <p>Returns the maximum value in the <em>input</em> <a href="#table">Table</a>. By default, this returns the
+              greatest value in the table as defined by the <code>&gt;</code> operator.</p>
+            <p>If a <em>handler</em> is provided, elements will first be transformed by <code>handler(value, key)</code>
+              before being used for comparison.</p>
+            <p>Elements will be compared using the <em>comparator</em> if it is provided. The comparator should take two
+              elements and return <code>true</code> if the first one is greater than the second one, and
+              <code>false</code> otherwise.</p>
+            <p>If the provided <em>input</em> has no elements, return <code>nil</code>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.max({1, 2, 3}) --&gt; 3
+</code></pre>
+            <pre><code class="language-lua">Dash.max({&quot;1&quot;, &quot;2&quot;, &quot;10&quot;}) --&gt; &quot;2&quot;
+</code></pre>
+            <pre><code class="language-lua">Dash.max({1, 2, 3}, function(num) return -num end) --&gt; 1
+</code></pre>
+            <pre><code class="language-lua">Dash.max(
+    {&quot;blue&quot;, &quot;red&quot;, &quot;orange&quot;}, 
+    nil, 
+    function(word1, word2) return word1:len() &gt; word2:len() end
+) --&gt; &quot;orange&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="min-new">min (new!)</h3>
+            <p><span class="tags">
+                <a href="#tables">Table</a>
+              </span></p>
+            <pre><code class="language-lua">type MinComparator = (any, any) -&gt; boolean
+type MinHandler = (Value, Key) -&gt; any
+
+min(input: Types.Table, handler: MinHandler?, comparator: MinComparator): any
+</code></pre>
+            <p>Returns the minimum value in the <em>input</em> <a href="#table">Table</a>. By default, this returns the
+              least value in the table as defined by the <code>&lt;</code> operator.</p>
+            <p>If a <em>handler</em> is provided, elements will first be transformed by <code>handler(value, key)</code>
+              before being used for comparison.</p>
+            <p>Elements will be compared using the <em>comparator</em> if it is provided. The comparator should take two
+              elements and return <code>true</code> if the first one is greater than the second one, and
+              <code>false</code> otherwise.</p>
+            <p>If the provided <em>input</em> has no elements, return <code>nil</code>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.min({1, 2, 3}) --&gt; 1
+</code></pre>
+            <pre><code class="language-lua">Dash.min({&quot;2&quot;, &quot;20&quot;, &quot;10&quot;}) --&gt; &quot;10&quot;
+</code></pre>
+            <pre><code class="language-lua">Dash.min({3, 2, 1}, function(num) return -num end) --&gt; 3
+</code></pre>
+            <pre><code class="language-lua">Dash.min(
+    {&quot;blue&quot;, &quot;red&quot;, &quot;orange&quot;}, 
+    nil, 
+    function(word1, word2) return word1:len() &lt; word2:len() end
+) --&gt; &quot;red&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="omit">omit</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">omit(input: Types.Table, keys: Types.Array&lt;any&gt;): Types.Table
+</code></pre>
+            <p>Return a new <a href="#table">Table</a> made from entries in the <em>input</em> <a
+                href="#table">Table</a> whose key is not in the <em>keys</em> Array.</p>
+            <p>If the input is an Array, ordering is preserved.</p>
+            <p>If the input is a Map, elements are returned in an arbitrary order.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Remove the ShouldShow key/value pair from the table
+Dash.omit({
+    ShouldShow = true,
+    Text = &quot;Hello World!&quot;,
+    Title = &quot;Greetings!&quot;,
+}, {&quot;ShouldShow&quot;})
+
+--[[
+Output: {
+    [&quot;Text&quot;] = &quot;Hello World!&quot;,
+    [&quot;Title&quot;] = &quot;Greetings!&quot;
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="reduce">reduce</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type Accumulator = any
+
+type ReduceHandler = (Accumulator, Value, Key) -&gt; Accumulator
+
+reduce(input: Types.Table, handler: ReduceHandler, initial: Accumulator)
+</code></pre>
+            <p>Iterate through the elements of the <em>input</em> <a href="#table">Table</a>, preserving order if it is
+              an <a href="#array">Array</a>.</p>
+            <p>Call the <em>handler</em> for each element, passing the return of the previous call as the first
+              argument.</p>
+            <p>The <em>initial</em> value is passed into the first call, and the final value returned by the function.
+            </p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- Count occurences of each element in array and output a table of counts
+-- See Dash.frequencies
+Dash.reduce(
+    {&quot;Red&quot;, &quot;Black&quot;, &quot;Red&quot;, &quot;Red&quot;, &quot;Black&quot;}, 
+    function(acc, color)
+        if acc[color] == nil then
+            acc[color] = 1
+        else
+            acc[color] += 1
+        end
+        return acc
+    end, {}
+)
+
+--[[
+Output: {
+    [&quot;Black&quot;] = 2,
+    [&quot;Red&quot;] = 3
+} 
+]]
+</code></pre>
+            <pre><code class="language-lua">-- Sum up elements, doubling even indices and halving odd indices
+-- Expected: 0.5 + 4 + 1.5 + 8 + 2.5 = 16.5
+Dash.reduce(
+    {1, 2, 3, 4, 5},
+    function(acc, num, index)
+        return acc + if index % 2 == 0 then num * 2 else num / 2
+    end, 0
+)
+--[[
+Output: 16.5
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="shallowequal">shallowEqual</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">shallowEqual(left: any, right: any): boolean
+</code></pre>
+            <p>Returns <code>true</code> if the <em>left</em> and <em>right</em> values are equal (by the equality
+              operator) or the
+              inputs are tables, and all their keys are equal.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.shallowEqual({
+    A = 1, 
+    B = 2
+}, {
+    A = 1,
+    B = 2,
+})
+
+--[[
+Output: true
+]]
+</code></pre>
+            <pre><code class="language-lua">Dash.shallowEqual({
+    A = 1, 
+    B = 2,
+    C = 3
+}, {
+    A = 1,
+    B = 2,
+    D = 3
+})
+
+--[[
+Output: false
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="some">some</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">type SomeHandler = (Value, Key) -&gt; boolean
+
+some(input: Types.Map&lt;Key, Value&gt;, handler: SomeHandler): boolean
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> <a href="#table">Table</a> in no particular order.
+            </p>
+            <p>Calls the <em>handler</em> for each entry and returns <code>true</code> if the handler returns truthy for
+              any
+              element which it is called with.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Does there exist a red fruit?
+Dash.some(
+    {
+        {Type = &quot;Cherry&quot;, Color = &quot;Red&quot;}, 
+        {Type = &quot;Strawberry&quot;, Color = &quot;Red&quot;}, 
+        {Type = &quot;Blueberry&quot;, Color = &quot;Blue&quot;}
+    }, 
+    function(fruit) return fruit.Color == &quot;Red&quot; end
+)
+
+--[[
+Output: true
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="values">values</h3>
+            <p><span class="tags">
+                <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">values(input: Types.Map&lt;any, any&gt;): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Returns an <a href="#array">Array</a> of the values in the <em>input</em> Table.</p>
+            <p>If the input is an Array, ordering is preserved.</p>
+            <p>If the input is a Map, values are returned in an arbitrary order.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.values({
+    Type = &quot;Cherry&quot;, 
+    Color = &quot;Red&quot;, 
+    Price = &quot;Expensive&quot;, 
+    EnjoymentLevel = &quot;High&quot;
+})
+
+--[[
+Output: {
+    [1] = &quot;Red&quot;,
+    [2] = &quot;Cherry&quot;,
+    [3] = &quot;High&quot;,
+    [4] = &quot;Expensive&quot;
+}
+]]
+</code></pre>
+            <hr>
+
+            <h2 id="arrays">Arrays</h2>
+            <p>These utilities operate on <a href="#array">Arrays</a>, tables with ordered keys 1..n.</p>
+            <hr>
+
+            <h3 id="append">append</h3>
+            <p><span class="tags">
+                <a href="#mutable">Mutable</a> | <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">append&lt;T&gt;(target: Types.Array&lt;T&gt;, ...: Types.Array&lt;T&gt;): Types.Array&lt;T&gt;
+</code></pre>
+            <p>Adds new elements to the <em>target</em> <a href="#array">Array</a> from subsequent <a
+                href="#array">Array</a> arguments in left-to-right order.</p>
+            <p>Arguments which are <code>nil</code> or None are skipped.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.append({1, 2}, {3, 4}, {5})
+
+--[[
+Output: {
+    [1] = 1,
+    [2] = 2,
+    [3] = 3,
+    [4] = 4,
+    [5] = 5
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="findindex">findIndex</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">type FindHandler = (Value, Key) -&gt; boolean
+
+findIndex(input: Types.Array&lt;any&gt;, handler: FindHandler): value?
+</code></pre>
+            <p>Returns the index of the first element in the <em>input</em> <a href="#array">Array</a> that the handler
+              returns <code>true</code> for,
+              when passed the <code>(value, key)</code> entry.</p>
+            <p>Returns nil if no entires satisfy the condition.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- Find index of &quot;Clementine&quot; fruit if it exists in the Array
+Dash.findIndex(
+    {&quot;Apple&quot;, &quot;Banana&quot;, &quot;Clementine&quot;}, 
+    function(fruit) return fruit == &quot;Clementine&quot; end
+)
+
+--[[
+Output: 3
+]]
+</code></pre>
+            <pre><code class="language-lua">Dash.findIndex(
+    {&quot;Apple&quot;, &quot;Banana&quot;}, 
+    function(fruit) return fruit == &quot;Clementine&quot; end
+)
+
+--[[
+Output: nil
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="flat">flat</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">flat(input: Types.Array&lt;Types.Array&lt;any&gt;&gt;): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Flattens the input array by a single level.
+              Outputs a new <a href="#array">Array</a> of elements merged from the <em>input</em> <a
+                href="#array">Array</a> arguments in left-to-right order.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Flatten a partition of numbers in the range 1-5
+Dash.flat({
+    {1, 2, 3}, 
+    {4, 5}
+})
+
+--[[
+Output:  {
+    [1] = 1,
+    [2] = 2,
+    [3] = 3,
+    [4] = 4,
+    [5] = 5
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="last">last</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">type FindHandler = (Value, Key) -&gt; boolean
+
+last(input: Types.Table, handler: FindHandler?): Value?
+</code></pre>
+            <p>Returns the last element in the <em>input</em> <a href="#array">Array</a> that the handler returns
+              <code>true</code> for, when
+              passed the <code>(value, key)</code> entry.</p>
+            <p>Returns nil if no entires satisfy the condition.</p>
+            <p>If handler is not defined, the function simply returns the last element of the Array.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.last({3, 2, 1})
+
+--[[
+Output: 1
+]]
+</code></pre>
+            <pre><code class="language-lua">-- Get last odd number
+Dash.last({4, 3, 2}, function(num) return num % 2 == 1 end)
+
+--[[
+Output: 3
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="mapfirst">mapFirst</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">type MapHandler = (Value, Key) -&gt; any?
+
+mapFirst(input: Types.Array&lt;any&gt;, handler: MapHandler)
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> <a href="#array">Array</a> in order 1..n.</p>
+            <p>Calls the <em>handler</em> for each entry and returns the first non-nil value returned by the handler.
+            </p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Get first color that's 6 letters and return its first letter
+Dash.mapFirst(
+    {&quot;Red&quot;, &quot;Yellow&quot;, &quot;Orange&quot;, &quot;Blue&quot;}, 
+    function(color)
+        return if color:len() == 6 then color:sub(1, 1) else nil
+    end
+)
+
+--[[
+Output: Y
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="maplast">mapLast</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">type MapHandler = (Value, Key) -&gt; any?
+
+mapLast(input: Types.Array&lt;any&gt;, handler: MapHandler)
+</code></pre>
+            <p>Iterates through the elements of the <em>input</em> <a href="#array">Array</a> in reverse in order n..1.
+            </p>
+            <p>Calls the <em>handler</em> for each entry and returns the first non-nil value returned by the handler.
+            </p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">-- Get last color that's 6 letters and return its first letter
+Dash.mapLast(
+    {&quot;Red&quot;, &quot;Yellow&quot;, &quot;Orange&quot;, &quot;Blue&quot;}, 
+    function(color)
+        return if color:len() == 6 then color:sub(1, 1) else nil
+    end
+)
+
+--[[
+Output: O
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="product-new">product (new!)</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">product(input: Types.Array&lt;number&gt;): number
+</code></pre>
+            <p>Multiplies together all of the numbers in the <em>input</em> <a href="#array">Array</a>.</p>
+            <p>If the <em>input</em> has no elements, return <code>1</code>.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.product({3, 3, 2}) --&gt; 18
+</code></pre>
+            <hr>
+
+            <h3 id="reverse">reverse</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">reverse(input: Types.Array&lt;any&gt;): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Reverse the order of the elements in the <em>input</em> Array.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.reverse({3, 2, 1})
+
+--[[
+Output: {
+    [1] = 1,
+    [2] = 2,
+    [3] = 3
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="slice">slice</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">slice(input: Types.Array&lt;any&gt;, left: number?, right: number?): Types.Array&lt;any&gt;
+</code></pre>
+            <p>Return a portion of the <em>input</em> <a href="#array">Array</a> starting with the element at the
+              <em>left</em> index and ending
+              with the element at the <em>right</em> index (i.e. an inclusive range)</p>
+            <p>If <em>left</em> is not defined, it defaults to 1.
+              If <em>right</em> is not defined, it defaults to the length of the array (i.e. the last element)</p>
+            <p>If <em>left</em> is <code>-n</code>, the slice starts with the element <code>n</code> places from the
+              last one.
+              If <em>right</em> is <code>-n</code>, the slice ends with the element <code>n</code> places from the last
+              one.</p>
+            <p>An empty array is returned if the slice has no or negative length.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.slice({1, 2, 3, 4, 5}, 2, 4)
+
+--[[
+Output: {
+    [1] = 2,
+    [2] = 3,
+    [3] = 4
+}
+]]
+</code></pre>
+            <pre><code class="language-lua">Dash.slice({1, 2, 3, 4, 5}, 3)
+
+--[[
+Output: {
+    [1] = 3,
+    [2] = 4,
+    [3] = 5
+}
+]]
+</code></pre>
+            <pre><code class="language-lua">Dash.slice({1, 2, 3, 4, 5}, nil, -1)
+
+--[[
+Output: {
+    [1] = 1,
+    [2] = 2,
+    [3] = 3,
+    [4] = 4
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="sum-new">sum (new!)</h3>
+            <p><span class="tags">
+                <a href="#arrays">Arrays</a>
+              </span></p>
+            <pre><code class="language-lua">sum(input: Types.Array&lt;number&gt;): number
+</code></pre>
+            <p>Adds together all of the numbers in the <em>input</em> <a href="#array">Array</a>.</p>
+            <p>If the input Array has no elements, return <code>0</code>.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.sum({3, 2, 1}) --&gt; 6
+</code></pre>
+            <hr>
+
+            <h2 id="maps">Maps</h2>
+            <p>These utilities operate on <a href="#map">Maps</a>, tables with arbitrary keys.</p>
+            <hr>
+
+            <h3 id="assign">assign</h3>
+            <p><span class="tags">
+                <a href="#mutable">Mutable</a> | <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">assign(target: Types.Table, ...: Args&lt;Table&gt;): Types.Table
+</code></pre>
+            <p>Adds new values to <em>target</em> from subsequent <a href="#table">Table</a> arguments in left-to-right
+              order.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">local characters = {
+    Frodo = {
+        name = &quot;Frodo Baggins&quot;,
+        team = &quot;blue&quot;
+    },
+    Boromir = {
+        score = 5
+    }
+}
+local otherCharacters = {
+    Frodo = {
+        team = &quot;red&quot;,
+        score = 10
+    },
+    Bilbo = {
+        team = &quot;yellow&quot;,
+    },
+    Boromir = {
+        score = {1, 2, 3}
+    }
+}
+local result = assign(characters, otherCharacters)
+print(result) --[[
+--&gt; {
+    Frodo = {
+        team = &quot;red&quot;,
+        score = 10
+    },
+    Bilbo = {
+        team = &quot;yellow&quot;
+    },
+    Boromir = {
+        score = {1, 2, 3}
+    }
+}
+]]
+</code></pre>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#join">Dash.join</a> for an immutable alternative</li>
+            </ul>
+            <hr>
+
+            <h3 id="freeze">freeze</h3>
+            <p><span class="tags">
+                <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">freeze(objectName: string, object: Types.Table, throwIfMissing: boolean?): Types.Table
+</code></pre>
+            <p>Returns a new read-only view of <em>object</em> which prevents any values from being changed.</p>
+            <p><strong>Parameters</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>name</code></td>
+                  <td>The name of the object for improved error message readability.</td>
+                </tr>
+                <tr>
+                  <td><code>throwIfMissing</code></td>
+                  <td>If <code>true</code> then access to a missing key will also throw.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Notes</strong></p>
+            <p>Unfortunately you cannot iterate using <code>pairs</code> or <code>ipairs</code> on frozen objects
+              because Luau doesn't support defining these custom iterators in metatables.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local drink = freeze(&quot;Ice Cream&quot;, {
+    flavor = &quot;mint&quot;,
+    topping = &quot;sprinkles&quot;
+}, true)
+print(drink.flavor) --&gt; &quot;mint&quot;
+drink.flavor = &quot;vanilla&quot;
+--!&gt; ReadonlyKey: Attempt to write to readonly key &quot;flavor&quot; (a string) of frozen object &quot;Ice Cream&quot;
+print(drink.syrup) --&gt; nil
+--!&gt; MissingKey: Attempt to read missing key &quot;syrup&quot; (a string) of frozen object &quot;Ice Cream&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="getorset">getOrSet</h3>
+            <p><span class="tags">
+                <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">type GetValueHandler = (Types.Table, Key) -&gt; Value
+
+getOrSet(input: Types.Table, key: Key, getValue: GetValueHandler): Value
+</code></pre>
+            <p>Returns a value of the <em>input</em> <a href="#table">Table</a> at the <em>key</em> provided.
+              If the key is missing, the value is acquired from the <em>getValue</em> handler,
+              added to the <em>input</em> <a href="#table">Table</a> and returned.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.getOrSet(
+    {Item = &quot;Gummy Bear&quot;, Color = &quot;Lime&quot;}, 
+    &quot;Color&quot;, 
+    function() return &quot;Yellow&quot; end
+)
+
+--[[
+Output: Lime
+]]
+</code></pre>
+            <pre><code class="language-lua">Dash.getOrSet(
+    {Item = &quot;Gummy Bear&quot;}, 
+    &quot;Color&quot;, 
+    function() return &quot;Yellow&quot; end
+)
+
+--[[
+Output: Yellow
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="join">join</h3>
+            <p><span class="tags">
+                <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">join(...): Types.Map&lt;any, any&gt;
+</code></pre>
+            <p>Output a new <a href="#map">Map</a> from merging all the keys in the <a href="#map">Map</a> arguments in
+              left-to-right order.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.join(
+    {Text = &quot;Hello World!&quot;, Color = &quot;Sky Blue&quot;}, 
+    {Title = &quot;Greetings!&quot;, Color = &quot;Indigo&quot;}
+)
+
+--[[
+Output: {
+    [&quot;Color&quot;] = &quot;Indigo&quot;,
+    [&quot;Text&quot;] = &quot;Hello World!&quot;,
+    [&quot;Title&quot;] = &quot;Greetings!&quot;
+} 
+]]
+</code></pre>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#assign">Dash.assign</a> for a mutable alternative</li>
+            </ul>
+            <hr>
+
+            <h3 id="joindeep">joinDeep</h3>
+            <p><span class="tags">
+                <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">joinDeep(source: Types.Map&lt;any, any&gt;, delta: Types.Map&lt;any, any&gt;): Types.Map&lt;any, any&gt;
+</code></pre>
+            <p>Creates a shallow clone of the <em>source</em> Map, and copies the values from the <em>delta</em> Map
+              by key, like the join utility.</p>
+            <p>However, if any of the values are tables themselves, the joinDeep function is called
+              recursively to produce a new table at the specified key.</p>
+            <p>The purpose of this function is to merge nested immutable data using as few table
+              creation operations as possible, making it appropriate for updating state in a reducer.</p>
+            <p><strong>Usage</strong></p>
+            <ul>
+              <li>The <a href="#none">None</a> symbol can be used to remove an existing value.</li>
+            </ul>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local source = {
+    name = &quot;car&quot;,
+    lights = {
+        front = 2,
+        back = 2,
+        indicators = {
+            color = &quot;orange&quot;
+        },
+        brake = {
+            color = &quot;red&quot;
+        }
+    },
+    tyres = 4
+}
+local delta = {
+    name = &quot;bike&quot;,
+    lights = {
+        front = 3,
+        indicators = {
+            rate = 20
+        }
+    },
+    tyres = None
+}
+local output = joinDeep(source, delta)
+[[
+Output: {
+    lights = {
+        back = 2,
+        brake = {
+            color = &quot;red&quot;
+        },
+        front = 3,
+        indicators = {
+            color = &quot;orange&quot;,
+            rate = 20
+        }
+    },
+    name = &quot;bike&quot;
+}
+]]
+</code></pre>
+            <hr>
+
+            <h2 id="strings">Strings</h2>
+            <hr>
+
+            <p>These utilities are helpful for working with strings.</p>
+            <hr>
+
+            <h3 id="endswith">endsWith</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">endsWith(input: string, suffix: string): boolean
+</code></pre>
+            <p>Checks if <em>input</em> ends with the string <em>suffix</em>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">endsWith(&quot;Fun Roblox Games&quot;, &quot;Games&quot;) --&gt; true
+</code></pre>
+            <pre><code class="language-lua">endsWith(&quot;Bad Roblox Memes&quot;, &quot;Games&quot;) --&gt; false
+</code></pre>
+            <hr>
+
+            <h3 id="islowercase">isLowercase</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">isLowercase(input: string): boolean
+</code></pre>
+            <p>Returns <code>true</code> if the first character of <em>input</em> is a lower-case character.</p>
+            <p>Throws if the <em>input</em> is not a string or it is the empty string.</p>
+            <p>Our current version of Lua unfortunately does not support upper or lower-case detection outside
+              the english alphabet. This function has been implemented to return the expected result once
+              this has been corrected.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.isLowercase(&quot;abcdef&quot;) --&gt; true
+</code></pre>
+            <pre><code class="language-lua">Dash.isLowercase(&quot;Title&quot;) --&gt; false
+</code></pre>
+            <hr>
+
+            <h3 id="isuppercase">isUppercase</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">isUppercase(input: string): boolean
+</code></pre>
+            <p>Returns <code>true</code> if the first character of <em>input</em> is an upper-case character.</p>
+            <p>Throws if the <em>input</em> is not a string or it is the empty string.</p>
+            <p>Our current version of Lua unfortunately does not support upper or lower-case detection outside
+              the english alphabet. This function has been implemented to return the expected result once
+              this has been corrected.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">Dash.isUppercase(&quot;ABCDEF&quot;) --&gt; true
+</code></pre>
+            <pre><code class="language-lua">Dash.isUppercase(&quot;rObLoX&quot;) --&gt; false
+</code></pre>
+            <hr>
+
+            <h3 id="leftpad">leftPad</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">leftPad(input: string, length: number, prefix: string?): string
+</code></pre>
+            <p>Makes a string of <code>length</code> from <code>input</code> by repeating characters from
+              <code>prefix</code> at the start of the string.</p>
+            <p><strong>Params</strong></p>
+            <ul>
+              <li><code>prefix</code> - default = <code>""</code></li>
+            </ul>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">leftPad(&quot;toast&quot;, 6) --&gt; &quot; toast&quot;
+</code></pre>
+            <pre><code class="language-lua">leftPad(&quot;2&quot;, 2, &quot;0&quot;) --&gt; &quot;02&quot;
+</code></pre>
+            <pre><code class="language-lua">leftPad(&quot;toast&quot;, 10, &quot;:)&quot;) --&gt; &quot;:):):toast&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="rightpad">rightPad</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">rightPad(input: string, length: number, suffix: string?): string
+</code></pre>
+            <p>Makes a string of <code>length</code> from <code>input</code> by repeating characters from
+              <code>suffix</code> at the end of the string.</p>
+            <p>By default, suffix is <code>" "</code>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">rightPad(&quot;toast&quot;, 6) --&gt; &quot;toast &quot;
+</code></pre>
+            <pre><code class="language-lua">rightPad(&quot;2&quot;, 2, &quot;!&quot;) --&gt; &quot;2!&quot;
+</code></pre>
+            <pre><code class="language-lua">rightPad(&quot;toast&quot;, 10, &quot;:)&quot;) --&gt; &quot;toast:):):&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="spliton">splitOn</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">splitOn(input: string, pattern: string): Types.Array&lt;string&gt;
+</code></pre>
+            <p>Splits <em>input</em> into parts based on a <em>pattern</em> delimiter and returns a <a
+                href="#table">Table</a> of the parts,
+              followed by a <a href="#table">Table</a> of the matched delimiters.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local parts, delimeters = Dash.splitOn(
+    &quot;The quick brown fox jumps over the lazy dog&quot;, 
+    &quot; &quot;
+)
+
+print(parts)
+--[[
+Output: {
+    [1] = &quot;The&quot;,
+    [2] = &quot;quick&quot;,
+    [3] = &quot;brown&quot;,
+    [4] = &quot;fox&quot;,
+    [5] = &quot;jumps&quot;,
+    [6] = &quot;over&quot;,
+    [7] = &quot;the&quot;,
+    [8] = &quot;lazy&quot;,
+    [9] = &quot;dog&quot;
+}
+]]
+
+print(delimeters)
+--[[
+{
+    [1] = &quot; &quot;,
+    [2] = &quot; &quot;,
+    [3] = &quot; &quot;,
+    [4] = &quot; &quot;,
+    [5] = &quot; &quot;,
+    [6] = &quot; &quot;,
+    [7] = &quot; &quot;,
+    [8] = &quot; &quot;
+}
+]]
+</code></pre>
+            <hr>
+
+            <h3 id="startswith">startsWith</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">startsWith(input: string, prefix: string): boolean
+</code></pre>
+            <p>Checks if <em>input</em> starts with the string <em>start</em>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">startsWith(&quot;Fun Roblox Games&quot;, &quot;Fun&quot;) --&gt; true
+</code></pre>
+            <pre><code class="language-lua">startsWith(&quot;Chess&quot;, &quot;Fun&quot;) --&gt; false
+</code></pre>
+            <hr>
+
+            <h3 id="trim">trim</h3>
+            <p><span class="tags">
+                <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">trim(input: string): string
+</code></pre>
+            <p>Remove any whitespace at the start and end of the <em>input</em> string.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">Dash.trim(&quot;\n\t\rhello world   &quot;) --&gt; &quot;hello world&quot;
+</code></pre>
+            <hr>
+
+            <h2 id="functions">Functions</h2>
+            <p>These utilities are helpful for working with functions.</p>
+            <hr>
+
+            <h3 id="compose">compose</h3>
+            <p><span class="tags">
+                <a href="#functions">Functions</a>
+              </span></p>
+            <pre><code>compose(...: Types.Array&lt;Types.AnyFunction&gt;): Types.AnyFunction
+</code></pre>
+            <p>Returns a function that calls the argument functions in left-right order on an input, passing
+              the return of the previous function as argument(s) to the next.</p>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local function fry(item)
+    return &quot;fried &quot; .. item
+end
+local function cheesify(item)
+    return &quot;cheesy &quot; .. item
+end
+local prepare = compose(fry, cheesify)
+prepare(&quot;nachos&quot;) --&gt; &quot;cheesy fried nachos&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="foreachargs">forEachArgs</h3>
+            <p><span class="tags">
+                <a href="#functions">Functions</a>
+              </span></p>
+            <pre><code class="language-lua">forEachArgs(handler: Types.AnyFunction, ...: Args&lt;Value&gt;): ()
+</code></pre>
+            <p>Iterates through the tail arguments in order, including nil values up to the argument list length.</p>
+            <p>Calls the <em>handler</em> for each entry.</p>
+            <hr>
+
+            <h3 id="identity">identity</h3>
+            <p><span class="tags">
+                <a href="#functions">Functions</a>
+              </span></p>
+            <pre><code class="language-lua">identity(...)
+</code></pre>
+            <p>The identity function, which simply returns its input parameters.</p>
+            <p>Can be used to make it clear that a handler returns its inputs.</p>
+            <hr>
+
+            <h3 id="iscallable">isCallable</h3>
+            <p><span class="tags">
+                <a href="#functions">Functions</a>
+              </span></p>
+            <pre><code class="language-lua">isCallable(value: any): boolean
+</code></pre>
+            <p>Returns <code>true</code> if the value can be called i.e. you can write <code>value(...)</code>.</p>
+            <hr>
+
+            <h3 id="noop">noop</h3>
+            <p><span class="tags">
+                <a href="#functions">Functions</a>
+              </span></p>
+            <pre><code class="language-lua">noop()
+</code></pre>
+            <p>A function which does nothing.</p>
+            <p>Can be used to make it clear that a handler has no function.</p>
+            <hr>
+
+            <h2 id="classes">Classes</h2>
+            <p>These utilities are helpful for working with classes.</p>
+            <hr>
+
+            <h3 id="error">Error</h3>
+            <p><span class="tags">
+                <a href="#classes">Classes</a>
+              </span></p>
+            <pre><code class="language-lua">Error.new(name: string, message: string, tags: Table?)
+</code></pre>
+            <p>Create an error object with a specified name and message.</p>
+            <p>In native Lua, errors can only be string values. At Roblox, we can take advantage of throwing
+              error objects to provide structured information about problems that occur.</p>
+            <p>The tags table stores rich information about an error which can be provided when it is
+              thrown, and later passed to a logging endpoint.</p>
+            <p>Throwing an error instance captures its stack trace, avoiding the need to explicitly use xpcall.</p>
+            <p><strong>Fields</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>name: string</code></td>
+                  <td>The name of the error</td>
+                </tr>
+                <tr>
+                  <td><code>message: string</code></td>
+                  <td>A message which will be formatted with <a href="#format">Dash.format</a> if the error is thrown
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>tags: Table</code></td>
+                  <td>A table to store custom rich information about the error</td>
+                </tr>
+                <tr>
+                  <td><code>stack: string?</code></td>
+                  <td>The value of <code>debug.traceback()</code> when the error is thrown</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Methods</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>:joinTags(tags: Table?)</code></td>
+                  <td>Return a new error instance containing the tags provided joined to any existing tags of the
+                    current error instance.</td>
+                </tr>
+                <tr>
+                  <td><code>:throw(tags: Table?)</code></td>
+                  <td>Throw an error.<br><br>The stack of the error is captured and stored.<br><br>If tags are provided,
+                    a new error is created and thrown with the joined tags of this instance.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Static Methods</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.new(name: string, message: string, tags: Table?)</code></td>
+                  <td>Returns a new <code>Error</code> instance</td>
+                </tr>
+                <tr>
+                  <td><code>.is(other: any)</code></td>
+                  <td>Returns <code>true</code> if <em>other</em> is an <code>Error</code> instance</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Usage</strong></p>
+            <p>In general, errors should not be used during normal control flow.</p>
+            <hr>
+
+            <h3 id="symbol">Symbol</h3>
+            <p><span class="tags">
+                <a href="#classes">Classes</a>
+              </span></p>
+            <p>Create a symbol with a specified name. Upper snake-case is recommended as the symbol is a
+              constant, unless you are linking the symbol conceptually to a different string.</p>
+            <p>Symbols are useful when you want a value that isn't equal to any other type, for example if you
+              want to store a unique property on an object that won't be accidentally accessed with a simple
+              string lookup.</p>
+            <p><strong>Static Methods</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.new(name: string)</code></td>
+                  <td>Returns a new unique <code>Symbol</code> instance with called <em>name</em></td>
+                </tr>
+                <tr>
+                  <td><code>.is(other: any)</code></td>
+                  <td>Returns <code>true</code> if <em>other</em> is a <code>Symbol</code> instance</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Example</strong></p>
+            <pre><code class="language-lua">local CHEESE = Symbol.new(&quot;CHEESE&quot;)
+local FAKE_CHEESE = Symbol.new(&quot;CHEESE&quot;)
+print(CHEESE == CHEESE) --&gt; true
+print(CHEESE == FAKE_CHEESE) --&gt; false
+print(tostring(CHEESE)) --&gt; &quot;Symbol.new(CHEESE)&quot;
+</code></pre>
+            <hr>
+
+            <h3 id="class_1">class</h3>
+            <p><span class="tags">
+                <a href="#classes">Classes</a>
+              </span></p>
+            <p>Create a class called <em>name</em> with the specified <em>constructor</em>. The constructor should
+              return a
+              plain table which will be turned into an instance of <em>Class</em> from a call to
+              <code>Class.new(...)</code>.</p>
+            <p><strong>Instance Methods</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>:toString(): string</code></td>
+                  <td>Returns a string representation of the class</td>
+                </tr>
+                <tr>
+                  <td><code>:equals(other: any):boolean</code></td>
+                  <td>Returns <code>true</code> if the instance is equal to <em>other</em></td>
+                </tr>
+                <tr>
+                  <td><code>:_init()</code></td>
+                  <td>A private function which is called once the instance has been initialized</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Static Methods</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.new(...): Table</code></td>
+                  <td>Returns a new instance of the class</td>
+                </tr>
+                <tr>
+                  <td><code>.isInstance(value: any): boolean</code></td>
+                  <td>Returns <code>true</code> if <em>value</em> is an instance of the class</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">-- Create a simple Vehicle class
+local Vehicle = class(&quot;Vehicle&quot;, function(wheelCount: number) return
+    {
+        speed = 0,
+        wheelCount = wheelCount
+    }
+end)
+function Vehicle:drive(speed)
+    self.speed = speed
+end
+-- Create a car instance
+local car = Vehicle.new(4)
+car.wheelCount --&gt; 4
+car.speed --&gt; 0
+-- Drive the car
+car:drive(10)
+car.speed --&gt; 10
+</code></pre>
+            <p><strong>Usage</strong></p>
+            <ul>
+              <li>When using Dash classes, private fields should be prefixed with <code>_</code> to avoid accidental
+                access.</li>
+              <li>A private field should only be accessed by a method of the class itself, though Dash does not restrict
+                this in code.</li>
+              <li>Public fields are recommended when there is no complex access logic e.g. <code>position.x</code></li>
+            </ul>
+            <hr>
+
+            <h2 id="symbols">Symbols</h2>
+            <p>Symbol definitions.</p>
+            <hr>
+
+            <h3 id="none">None</h3>
+            <p><span class="tags">
+                <a href="#symbols">Symbols</a>
+              </span></p>
+            <p>A symbol representing nothing, that can be used in place of nil as a key or value of a table,
+              where nil is illegal.</p>
+            <p>Utility functions can check for the None symbol and treat it like a nil value.</p>
+            <p><strong>Usage</strong></p>
+            <p>Use cases include:</p>
+            <ol>
+              <li>Creating an ordered list with undefined values in it</li>
+              <li>Creating a map with a key pointing to a nil value</li>
+            </ol>
+            <hr>
+
+            <h2 id="debugging">Debugging</h2>
+            <p>These utilities assist with debugging Lua code.</p>
+            <h3 id="assertequal">assertEqual</h3>
+            <p><span class="tags">
+                <a href="#mutable">Debugging</a> | <a href="#maps">Maps</a>
+              </span></p>
+            <pre><code class="language-lua">assertEqual(left: any, right: any, formattedErrorMessage: string?): ()
+</code></pre>
+            <p>Performs a simple equality check and throws an error if <em>left</em> is not equal to <em>right</em>.</p>
+            <p>The formatted error message can be customized, which by default provides a serialization of
+              both inputs using <a href="#pretty">Dash.pretty</a>.</p>
+            <p>The <code>left</code> and <code>right</code> values are available to be referenced in the formatted
+              message.</p>
+            <hr>
+
+            <h3 id="cycles">cycles</h3>
+            <p><span class="tags">
+                <a href="#debugging">Debugging</a> | <a href="#tables">Tables</a>
+              </span></p>
+            <pre><code class="language-lua">cycles(value: any, initialCycles: Cycles?): Cycles
+</code></pre>
+            <p>Get information about the number of times references to the same table values appear in a data structure.
+            </p>
+            <p>Operates on cyclic structures, and returns a Cycles object for a given <em>value</em> by walking it
+              recursively.</p>
+            <p><strong>Cycles</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>omit</code></td>
+                  <td><code>Array&lt;any&gt;</code></td>
+                  <td>An array of keys which should not be visited</td>
+                </tr>
+                <tr>
+                  <td><code>visited</code></td>
+                  <td><code>Set&lt;Table&gt;</code></td>
+                  <td>A set of tables which were visited recursively</td>
+                </tr>
+                <tr>
+                  <td><code>refs</code></td>
+                  <td><code>Map&lt;Table, number&gt;</code></td>
+                  <td>A map from table to unique index in visit order</td>
+                </tr>
+                <tr>
+                  <td><code>nextRef</code></td>
+                  <td><code>number</code></td>
+                  <td>The number to use for the next unique table visited</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+
+            <h3 id="format">format</h3>
+            <p><span class="tags">
+                <a href="#debugging">Debugging</a> | <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">format(formatString: string, ...): string
+</code></pre>
+            <p>Returns the <em>format</em> string with placeholders <code>{...}</code> substituted with readable
+              representations
+              of the subsequent arguments.
+              This function is a simpler &amp; more powerful version of <code>string.format</code>, inspired by
+              <code>format!</code>
+              in Rust.</p>
+            <ul>
+              <li><code>{}</code> formats and prints the next argument using <code>:format()</code> if available, or a
+                suitable
+                default representation depending on its type.</li>
+              <li><code>{blah}</code> formats and prints the key "blah" of the 1st argument</li>
+              <li><code>{2}</code> formats and prints the 2nd argument.</li>
+              <li><code>{#2}</code> prints the length of the 2nd argument.
+                Display parameters can be combined after a <code>:</code> in the curly braces. Any format parameters
+                used
+                in <code>string.format</code> can be used here, along with these extras:</li>
+              <li><code>{:?}</code> formats any value using <code>pretty</code>.</li>
+              <li><code>{:#?}</code> formats any value using multiline <code>pretty</code>.</li>
+            </ul>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">local props = {&quot;teeth&quot;, &quot;claws&quot;, &quot;whiskers&quot;, &quot;tail&quot;}
+format(&quot;{} is in {:#?}&quot;, &quot;whiskers&quot;, props)
+--&gt; [[whiskers is in {&quot;teeth&quot;, &quot;claws&quot;, &quot;whiskers&quot;, &quot;tail&quot;}]]
+</code></pre>
+            <pre><code class="language-lua">format(&quot;The time is {:02}:{:02}&quot;, 2, 4) -&gt; &quot;The time is 02:04&quot;
+</code></pre>
+            <pre><code class="language-lua">format(&quot;The color blue is #{:06X}&quot;, 255) -&gt; &quot;The color blue is #0000FF&quot;
+</code></pre>
+            <p><strong>Usage</strong></p>
+            <ul>
+              <li>Escape <code>{</code> with <code>{{</code> and <code>}</code> similarly with <code>}}</code>.</li>
+              <li>See <a
+                  href="https://developer.roblox.com/articles/Format-String">https://developer.roblox.com/articles/Format-String</a>
+                for complete list of formating options and further use cases.</li>
+            </ul>
+            <hr>
+
+            <h3 id="formatvalue">formatValue</h3>
+            <p><span class="tags">
+                <a href="#debugging">Debugging</a> | <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">formatValue(value: any, displayString: string): string
+</code></pre>
+            <p>Format a specific <em>value</em> using the specified <em>displayString</em>.</p>
+            <p><strong>Examples</strong></p>
+            <pre><code class="language-lua">formatValue(255, &quot;06X&quot;) --&gt; &quot;0000FF&quot;
+</code></pre>
+            <pre><code class="language-lua">formatValue(255.5) --&gt; &quot;255.5&quot;
+</code></pre>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#format">Dash.format</a> - see format for a full description of valid display strings.</li>
+            </ul>
+            <hr>
+
+            <h3 id="pretty">pretty</h3>
+            <p><span class="tags">
+                <a href="#debugging">Debugging</a> | <a href="#tables">Tables</a> | <a href="#strings">Strings</a>
+              </span></p>
+            <pre><code class="language-lua">pretty(object: any, options: PrettyOptions?): string
+</code></pre>
+            <p>Return a pretty string serialization of <em>object</em>.</p>
+            <p>This implementation deals with cycles in tables and can neatly display metatables.</p>
+            <p>Optionally use an indented multiline string, limit the depth of tables, omit or pick keys.</p>
+            <p><strong>PrettyOptions</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>depth</code></td>
+                  <td><code>number?</code></td>
+                  <td>The maximum depth of ancestors of a table to display</td>
+                </tr>
+                <tr>
+                  <td><code>omit</code></td>
+                  <td><code>Array&lt;any&gt;?</code></td>
+                  <td>An array of keys which should not be visited</td>
+                </tr>
+                <tr>
+                  <td><code>multiline</code></td>
+                  <td><code>boolean?</code></td>
+                  <td>Whether to use multiple lines (default = false)</td>
+                </tr>
+                <tr>
+                  <td><code>noQuotes</code></td>
+                  <td><code>boolean?</code></td>
+                  <td>Whether to drop the quotation marks around strings. By default, this is true for table keys</td>
+                </tr>
+                <tr>
+                  <td><code>indent</code></td>
+                  <td><code>string?</code></td>
+                  <td>The indent string to use (default = "\t")</td>
+                </tr>
+                <tr>
+                  <td><code>visited</code></td>
+                  <td><code>Set&lt;Table&gt;?</code></td>
+                  <td>A set of tables which have already been visited and should be referred to by reference</td>
+                </tr>
+                <tr>
+                  <td><code>cycles</code></td>
+                  <td><code>Cycles?</code></td>
+                  <td>A cycles object returned from <code>cycles</code> to aid reference display</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>See</strong></p>
+            <ul>
+              <li><a href="#cycles">Dash.cycles</a></li>
+            </ul>
+            <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </article>
+        </div>
+
+
+        <script>var target = document.getElementById(location.hash.slice(1)); target && target.name && (target.checked = target.name.startsWith("__tabbed_"))</script>
+      </div>
+
+    </main>
+
+    <footer class="md-footer">
+
+      <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+          <div class="md-copyright">
+
+
+            Made with
+            <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+              Material for MkDocs
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog__inner md-typeset"></div>
+  </div>
+
+
+  <script id="__config"
+    type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+
+
+  <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+
+
+</body>
+
+</html>
